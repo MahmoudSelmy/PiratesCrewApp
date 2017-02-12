@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.techlap.piratescrewapp.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+        <include layout="@layout/app_bar"
+            android:id="@+id/app_bar"
+            ></include>
+    </LinearLayout>
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/add_btn"
+        android:background="#FFFFFF"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/imgSelector"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/titleField"
+        android:hint="Post Title.."
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/input_outline"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:inputType="textMultiLine"
+        android:hint="Post Description.."
+        android:gravity="left"
+        android:ems="10"
+        android:padding="10dp"
+        android:id="@+id/descField"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/input_outline"/>
+
+    <com.andexert.library.RippleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_color="@color/colorPrimary"
+        app:rv_framerate="10"
+        app:rv_rippleDuration="200"
+        app:rv_alpha="155"
+        app:rv_zoom="true"
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Post"
+            android:id="@+id/subbut"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"/>
+    </com.andexert.library.RippleView>
+
+
+
+</LinearLayout>

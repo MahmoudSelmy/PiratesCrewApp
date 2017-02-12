@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.techlap.piratescrewapp.NavigationDrawerFragment"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/navigation"
+
+        >
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/duck"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="2dp"
+            app:civ_shadow="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="40dp"
+            app:civ_shadow_radius="10"
+            app:civ_shadow_color="@color/colorPrimary"
+            android:id="@+id/profileNavImage"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Mahmoud Ashraf"
+            style="@style/RegButton"
+            android:id="@+id/profileNavName"
+            android:textStyle="italic"
+            android:layout_below="@+id/profileNavImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f8f6f9"
+        android:layout_weight="1"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/containerDrawerImage"
+            android:id="@+id/drawerList"
+            android:background="#FFFFFF">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

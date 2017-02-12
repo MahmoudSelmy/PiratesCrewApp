@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.techlap.piratescrewapp.MainActivity">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@mipmap/add_btn"
+        android:background="#FFFFFF"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/imgSelector"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/input_outline"
+            android:layout_marginBottom="3dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Postion: "
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:id="@+id/postionsSpinner"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:hint="Phone "
+            android:gravity="left"
+            android:ems="10"
+            android:padding="10dp"
+            android:id="@+id/phone"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/input_outline"
+            />
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"
+            android:hint="Personal Info"
+            android:gravity="left"
+            android:ems="10"
+            android:padding="10dp"
+            android:id="@+id/personalInfo"
+            android:background="@drawable/input_outline"
+            />
+    </LinearLayout>
+
+    <com.andexert.library.RippleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_color="@color/colorPrimary"
+        app:rv_framerate="10"
+        app:rv_rippleDuration="200"
+        app:rv_alpha="155"
+        app:rv_zoom="true"
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="confirm"
+            android:id="@+id/subbut"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            />
+    </com.andexert.library.RippleView>
+
+
+
+</LinearLayout>

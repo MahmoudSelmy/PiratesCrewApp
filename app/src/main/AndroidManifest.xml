@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.techlap.piratescrewapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.example.techlap.piratescrewapp.PiratesApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/ic_launcher_two"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait"
+        >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAcL3OlWWSCthSXZBLy427saob5Apgq1XY" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.PostActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.GoogleSignInActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.SetUpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.ProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.CommiteesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.example.techlap.piratescrewapp.Main2Activity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.techlap.piratescrewapp.CommiteeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.TaskActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.LogInActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.example.techlap.piratescrewapp.MyTasks"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.example.techlap.piratescrewapp.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.example.techlap.piratescrewapp.NotificationListener" />
+        <!--
+     ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.example.techlap.piratescrewapp.PostDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.techlap.piratescrewapp.FragmentProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1.5">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.2"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+
+                        >
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/duck"
+                            app:civ_border_color="@color/colorPrimaryDark"
+                            app:civ_border_width="2dp"
+                            app:civ_shadow="true"
+                            android:scaleType="centerCrop"
+                            app:civ_shadow_radius="10"
+                            app:civ_shadow_color="@color/colorPrimary"
+                            android:id="@+id/profileImage" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.6"
+                        android:gravity="center">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:gravity="center"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mahmoud A.Selmy"
+                                android:paddingTop="5dp"
+                                android:id="@+id/profileName"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="30sp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="mahmoudselmy06@gmail.com"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/profileEmail"
+                                android:paddingTop="5dp"
+                                android:textSize="15sp"
+                                android:layout_below="@+id/profileName"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_weight="1"
+                                android:text="IT-Member"
+                                android:paddingBottom="0dp"
+                                android:paddingTop="5dp"
+                                android:textSize="20sp"
+                                android:layout_below="@+id/profileEmail"
+                                android:layout_alignParentStart="true"
+                                android:id="@+id/profilePosition" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Info:"
+                    style="@style/PersonalInfo"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"
+                    android:text="Mr sheamus the best android developer in egypt , i love football, Bla Bla Bla"
+                    android:id="@+id/profilePersonalInfo"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

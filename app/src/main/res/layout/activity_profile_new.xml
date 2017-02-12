@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:autofit="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:fitsSystemWindows="true"
+            >
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/colorAccent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:fitsSystemWindows="true"
+                >
+
+                <ImageView
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/logo"
+                    android:id="@+id/profile_id"
+                    app:layout_collapseMode="parallax" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffe5e5e5"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="50dp">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="21 years old android developer"
+                           android:textStyle="italic"
+                           android:layout_centerInParent="true"
+                           android:textColor="#757575"
+                           android:id="@+id/profilePersonalInfo"
+                           />
+                   </RelativeLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:orientation="horizontal"
+                       >
+                       <View
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="1"
+                           ></View>
+                       <View
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="20"
+                           android:background="#D3D3D3"></View>
+                       <View
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="1"
+                           ></View>
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="40dp"
+                           android:orientation="horizontal"
+                           >
+                           <RelativeLayout
+                               android:layout_width="0dp"
+                               android:layout_height="match_parent"
+                               android:layout_weight="1"
+                               >
+                               <ImageView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_centerVertical="true"
+                                   android:src="@drawable/ic_work_black_24dp"/>
+                           </RelativeLayout>
+
+                           <com.andexert.library.RippleView
+                               android:layout_width="0dp"
+                               android:layout_height="match_parent"
+                               android:layout_weight="5"
+                               app:rv_color="@color/colorPrimary"
+                               app:rv_framerate="5"
+                               app:rv_rippleDuration="200"
+                               app:rv_alpha="155"
+                               app:rv_zoom="true"
+                               >
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:text="IT Member"
+                                   android:textSize="20sp"
+                                   android:layout_centerVertical="true"
+                                   android:id="@+id/profilePosition"
+                                   />
+                           </com.andexert.library.RippleView>
+
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="40dp"
+                           android:orientation="horizontal"
+                           >
+                           <RelativeLayout
+                               android:layout_width="0dp"
+                               android:layout_height="match_parent"
+                               android:layout_weight="1"
+                               >
+                               <ImageView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_centerVertical="true"
+                                   android:src="@drawable/ic_mail_outline_black_24dp"/>
+                           </RelativeLayout>
+                           <!--ordinary TextView @ java class-->
+                           <com.andexert.library.RippleView
+                               android:layout_width="0dp"
+                               android:layout_height="match_parent"
+                               android:layout_weight="5"
+                               app:rv_color="@color/colorPrimary"
+                               app:rv_framerate="10"
+                               app:rv_rippleDuration="200"
+                               app:rv_alpha="155"
+                               app:rv_zoom="true"
+                               >
+                               <me.grantland.widget.AutofitTextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:singleLine="true"
+                                   android:text="mahmoudselmy06@gmail.com"
+                                   android:layout_centerVertical="true"
+                                   android:maxLines="1"
+                                   android:textSize="15sp"
+                                   autofit:minTextSize="10sp"
+                                   android:id="@+id/profileEmail"
+                                   />
+                           </com.andexert.library.RippleView>
+
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="40dp"
+                           android:orientation="horizontal"
+                           >
+                           <RelativeLayout
+                               android:layout_width="0dp"
+                               android:layout_height="match_parent"
+                               android:layout_weight="1"
+                               >
+                               <ImageView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:layout_centerVertical="true"
+                                   android:src="@drawable/ic_phone_black_24dp"/>
+                           </RelativeLayout>
+                           <!--ordinary TextView @ java class-->
+                           <com.andexert.library.RippleView
+                               android:layout_width="0dp"
+                               android:layout_height="match_parent"
+                               android:layout_weight="5"
+                               app:rv_color="@color/colorPrimary"
+                               app:rv_framerate="10"
+                               app:rv_rippleDuration="200"
+                               app:rv_alpha="155"
+                               app:rv_zoom="true"
+                               >
+                               <me.grantland.widget.AutofitTextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:singleLine="true"
+                                   android:text="01143049499"
+                                   android:layout_centerVertical="true"
+                                   android:maxLines="1"
+                                   android:textSize="15sp"
+                                   autofit:minTextSize="10sp"
+                                   android:id="@+id/profilePhone"
+                                   />
+                           </com.andexert.library.RippleView>
+
+                       </LinearLayout>
+
+                   </LinearLayout>
+               </LinearLayout>
+           </android.support.v7.widget.CardView>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
